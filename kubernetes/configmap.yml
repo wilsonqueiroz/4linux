@@ -1,0 +1,12 @@
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: redis-conf
+  labels:
+    app: redis-conf
+data:
+  redis.conf: |+
+    cluster-enabled yes
+    requirepass 4linux
+    bind 0.0.0.0
+    save 10 1

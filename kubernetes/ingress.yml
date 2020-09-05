@@ -1,0 +1,13 @@
+apiVersion: extensions/v1beta1
+kind: Ingress
+metadata:
+    name: flask-app-ingress
+spec:
+    rules:
+    - host: python.34-121-245-138.nip.io
+      http:
+        paths:
+        - path: /
+          backend:
+            serviceName: flask-app
+            servicePort: 5000
